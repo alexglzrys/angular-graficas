@@ -1,1 +1,10 @@
-<p>grafica-barra works!</p>
+<!-- Componente: Grafica de Barras ng2-charts -->
+    <div style="display: block;">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
