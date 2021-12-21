@@ -7,7 +7,6 @@ import { BarrasDobleComponent } from './pages/barras-doble/barras-doble.componen
 import { DonaComponent } from './pages/dona/dona.component';
 import { DonaHttpComponent } from './pages/dona-http/dona-http.component';
 import { GraficaBarraComponent } from './components/grafica-barra/grafica-barra.component';
-import { MenuComponent } from './shared/menu/menu.component';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     BarrasDobleComponent,
     DonaComponent,
     DonaHttpComponent,
-    GraficaBarraComponent,
-    MenuComponent
+    GraficaBarraComponent
   ],
   imports: [
     CommonModule,
