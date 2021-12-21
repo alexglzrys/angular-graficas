@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col">
+    <!-- Componente: Grafica de Barras ng2-charts -->
     <div style="display: block;">
       <canvas baseChart
         [datasets]="barChartData"
@@ -10,6 +11,6 @@
         [chartType]="barChartType">
       </canvas>
     </div>
-    <button mat-button mat-raised-button color="primary" (click)="randomize()">Update</button>
+    <button class="btn btn-primary mt-4 float-end" (click)="randomize()">Actualizar datos</button>
   </div>
 </div>
