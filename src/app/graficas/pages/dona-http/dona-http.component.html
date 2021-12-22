@@ -1,7 +1,24 @@
-<h1>Gráfica Donas - HTTP</h1>
+<h1>Gráfica Donas - HTTP Redes Sociales</h1>
 <hr>
-<div class="row">
+
+<!-- Mostrar el loading mientras la data no esté disponible -->
+<div *ngIf="!doughnutChartData.length; else graficaDona" class="alert alert-info mt-4">Cargando información...</div>
+
+<div class="row mt-4">
   <div class="col-12">
+    <!-- Mostrar la gráfica cuando la data esté disponible  -->
+    <ng-template #graficaDona>
+      <div style="display: block;">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [colors]="doughnutChartColors"
+          [chartType]="doughnutChartType">
+        </canvas>
+      </div>
+    </ng-template>
 
   </div>
 </div>
+
+
