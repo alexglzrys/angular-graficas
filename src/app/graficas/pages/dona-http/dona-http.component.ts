@@ -33,7 +33,7 @@ export class DonaHttpComponent implements OnInit {
   constructor(private graficasService: GraficasService) { }
 
   ngOnInit(): void {
-    this.graficasService.getData().pipe(
+    /*this.graficasService.getData().pipe(
       delay(2000)
     ).subscribe(redesSociales => {
       console.log(redesSociales);
@@ -45,6 +45,15 @@ export class DonaHttpComponent implements OnInit {
       // Asociar los valores que viene del servicio en la gráfica
       this.doughnutChartLabels = [...labels];
       this.doughnutChartData.push([...values])
+    })*/
+
+
+    // Este servicio transforma la respuesta original del servidor a una manera que sea más facil para el cliente consumirla y asociarla con la gráfica a generar
+    this.graficasService.getDataRxjs().subscribe(({data, labels}) => {
+      console.log(data, labels);
+
+      this.doughnutChartLabels = [...labels];
+      this.doughnutChartData.push([...data])
     })
   }
 
